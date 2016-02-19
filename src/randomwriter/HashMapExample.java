@@ -2,7 +2,6 @@ package randomwriter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -24,14 +23,14 @@ public class HashMapExample {
 		values2.add("Hilarious");
 		hmList.put(new String[]{"Kajal", "Karishma"}, values2);
 		List<String> values3 = new ArrayList<String>();
-		values3.add("Sweet but talks a lot");
+		values3.add("Pizza partner");
 		values3.add("Nice");
-		hmList.put(new String[]{"Shraddha", "Dipali"}, Collections.unmodifiableList(Arrays.asList("Pizza partner", "Nice")));
+		hmList.put(new String[]{"Shraddha", "Dipali"}, values3);
 		List<String> values4 = new ArrayList<String>();
 		values4.add("Woody Allen");
 		values4.add("Dentist");
-		hmList.put(new String[]{"Disha", "Asma"}, Collections.unmodifiableList(Arrays.asList("Woody Allen", "Dentist")));
-
+		hmList.put(new String[]{"Disha", "Asma"}, values4);
+		
 		Iterator iter = hmList.entrySet().iterator();
 		while(iter.hasNext()) {
 			Map.Entry pairs = (Map.Entry)iter.next();
